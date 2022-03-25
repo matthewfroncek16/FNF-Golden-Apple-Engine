@@ -1,0 +1,7 @@
+←↓↑→
+WASD
+QWOP
+IJKL
+ASKL
+DFJK
+ZX23

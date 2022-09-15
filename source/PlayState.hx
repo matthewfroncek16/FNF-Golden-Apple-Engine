@@ -77,6 +77,11 @@ class PlayState extends MusicBeatState
 	public static var goods:Int = 0;
 	public static var sicks:Int = 0;
 
+	public static var practiceMode:Bool = false;
+	public static var botPlay:Bool = false;
+	public var botplaySine:Float = 0;
+	public var botplayTxt:FlxText;
+
 	public var camBeatSnap:Int = 4;
 	public var danceBeatSnap:Int = 2;
 	public var dadDanceSnap:Int = 2;
@@ -288,6 +293,7 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
+		botPlay = FlxG.save.data.botplay;
 		theFunne = FlxG.save.data.newInput;
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();

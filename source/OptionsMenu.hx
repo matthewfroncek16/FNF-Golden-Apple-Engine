@@ -142,6 +142,17 @@ class OptionsMenu extends MusicBeatState
 						ctrl.isMenuItem = true;
 						ctrl.targetY = curSelected - 6;
 						grpControls.add(ctrl);
+					case 7:
+						FlxG.save.data.botplay = !FlxG.save.data.botplay;
+						var ctrl:Alphabet = new Alphabet(0, (70 * curSelected) + 30, "Bot Play " + (!FlxG.save.data.botplay ? "off" : "on"), true, false);
+						ctrl.isMenuItem = true;
+						ctrl.targetY = curSelected - 11;
+						grpControls.add(ctrl);					case 11:
+						FlxG.save.data.botplay = !FlxG.save.data.botplay;
+						var ctrl:Alphabet = new Alphabet(0, (70 * curSelected) + 30, "Bot Play " + (!FlxG.save.data.botplay ? "off" : "on"), true, false);
+						ctrl.isMenuItem = true;
+						ctrl.targetY = curSelected - 11;
+						grpControls.add(ctrl);						
 						
 				}
 			}

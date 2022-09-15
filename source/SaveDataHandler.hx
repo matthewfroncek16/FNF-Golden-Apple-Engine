@@ -34,7 +34,10 @@ class SaveDataHandler
 
 		if (FlxG.save.data.newInput != null && FlxG.save.data.lastversion == null)
 			FlxG.save.data.lastversion = "pre-beta2";
-		
+
+		if (FlxG.save.data.botplay == null)
+			FlxG.save.data.botplay = false;
+
 		if (FlxG.save.data.newInput == null && FlxG.save.data.lastversion == null)
 			FlxG.save.data.lastversion = "beta2";
     }

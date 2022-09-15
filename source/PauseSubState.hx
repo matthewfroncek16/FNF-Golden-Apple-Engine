@@ -51,6 +51,19 @@ class PauseSubState extends MusicBeatSubstate
 		levelDifficulty.updateHitbox();
 		add(levelDifficulty);
 
+
+		var modeInfo:FlxText = new FlxText(20, 15 + (CoolUtil.difficultyString() == "" ? 32 : 64), 0, "", 32);
+		modeInfo.text += "";
+		if (PlayState.botPlay)
+			modeInfo.text += "Bot Play";
+		if (PlayState.practiceMode)
+			modeInfo.text += "Practice Mode";
+		modeInfo.scrollFactor.set();
+		modeInfo.setFormat(Paths.font('vcr.ttf'), 32);
+		modeInfo.updateHitbox();
+		if (PlayState.botPlay || PlayState.practiceMode)
+			add(modeInfo);
+
 		levelDifficulty.alpha = 0;
 		levelInfo.alpha = 0;
 
